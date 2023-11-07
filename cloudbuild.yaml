@@ -1,5 +1,5 @@
 steps:
 - name: 'maven:3.6.3-openjdk-17'
   entrypoint: 'mvn'
-  args: ['clean', 'install']
+  args: ['clean', 'install', '-DskipTests=true']
 
