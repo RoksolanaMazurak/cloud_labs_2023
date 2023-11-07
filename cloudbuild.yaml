@@ -1,14 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  id: 'Auth Login'
-  entrypoint: 'gcloud'
-  args: ['auth', 'login']
+- name: 'maven:3.6.3-openjdk-8'
+  entrypoint: 'mvn'
+  args: ['clean', 'install']
 
-- name: 'gcr.io/cloud-builders/gcloud'
-  id: 'Update staging server'
-  entrypoint: '/bin/sh'
-  args:
-  - '-c'
-  - |
-    set -x && \
-    gcloud compute ssh lab-1 --zone=europe-central2-a --command='/bin/sh /home/roksolana_mazurak_ir_2021/pull.sh'
