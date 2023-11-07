@@ -7,5 +7,3 @@ steps:
   - |
     set -x && \
     gcloud compute ssh lab-1 --zone=europe-central2-a --command='/bin/sh /home/roksolana_mazurak_ir_2021/pull.sh'
-
-#
