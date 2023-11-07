@@ -1,7 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  id: Update staging server
-  entrypoint: /bin/sh
+  id: 'Auth Login'
+  entrypoint: 'gcloud'
+  args: ['auth', 'login']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: 'Update staging server'
+  entrypoint: '/bin/sh'
   args:
   - '-c'
   - |
