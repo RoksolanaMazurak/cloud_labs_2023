@@ -3,3 +3,6 @@ steps:
   entrypoint: 'mvn'
   args: ['clean', 'install', '-DskipTests=true']
 
+- name: 'maven:3.6.3-openjdk-11'
+  entrypoint: 'mvn'
+  args: ['spring-boot:run']
