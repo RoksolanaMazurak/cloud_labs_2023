@@ -31,12 +31,12 @@ public class CarController {
         return new ResponseEntity<>(carDto, HttpStatus.OK);
     }
 
-    @GetMapping(value = "")
-    public ResponseEntity<CollectionModel<CarDto>> getAllCars() {
-        List<Car> cars = carService.findAll();
-        CollectionModel<CarDto> carDtos = carDtoAssembler.toCollectionModel(cars);
-        return new ResponseEntity<>(carDtos, HttpStatus.OK);
-    }
+   #@GetMapping(value = "")
+    #public ResponseEntity<CollectionModel<CarDto>> getAllCars() {
+     #   List<Car> cars = carService.findAll();
+      #  CollectionModel<CarDto> carDtos = carDtoAssembler.toCollectionModel(cars);
+       # return new ResponseEntity<>(carDtos, HttpStatus.OK);
+   #}
 
     @PostMapping(value = "")
     public ResponseEntity<CarDto> addCar(@RequestBody Car car) {
