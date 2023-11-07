@@ -1,8 +1,9 @@
 steps:
-- name: 'maven-build'  # Назва першого кроку
+- name: 'maven:3.6.3-openjdk-17'
   entrypoint: 'mvn'
-  args: ['clean', 'install', '-DskipTests']
-- name: 'spring-boot-run'  # Назва другого кроку
+  args: ['clean', 'install']
+- name: 'maven:3.6.3-openjdk-17'
   entrypoint: 'mvn'
   args: ['spring-boot:run']
+
 
